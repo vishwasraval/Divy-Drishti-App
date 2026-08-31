@@ -16,9 +16,3 @@ the readiness report; use the rest as you fill in each Play Console section.
 | `PLAY_CONSOLE_DECLARATIONS.md` | Every App-content declaration + the text to enter, incl. the Foreground Service declaration. |
 | `PLAY_REVIEWER_NOTES.md` | Instructions for Google's review team (no login; how to exercise SOS, camera, speech). |
 | `OSS_LICENSES_AND_MODELS.md` | Open-source notices + ML model weight license verification (issue H3). |
-
-The generated Word version of the readiness report is at the repo root:
-`Divy-Drishti - Google Play Store Production Readiness & Release Report.docx`.
-
-Signing: copy `keystore.properties.template` → `keystore.properties` (git-ignored)
-and fill it in, or set the `DIVYDRISHTI_*` env vars on CI.

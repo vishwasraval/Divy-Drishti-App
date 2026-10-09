@@ -1,6 +1,6 @@
 # Divy-Drishti — Privacy Policy
 
-**Last updated:** 2026-10-08
+**Last updated:** 2026-10-09
 **Applies to:** Divy-Drishti Android application (package `com.divydrishti.app`), all versions from 1.0.0.
 
 > Publish this text at a stable public HTTPS URL (e.g. a GitHub Pages site or the
@@ -29,10 +29,11 @@ contact: **<INSERT CONTACT EMAIL>**.
 | Data | Why | Where it goes |
 |---|---|---|
 | **Camera frames** | Real-time object, hazard, text (OCR) and currency-denomination recognition in the "See" feature | Held in memory only, analysed frame-by-frame, then discarded. Never written to storage. Never uploaded. |
-| **Microphone audio** | Speech-to-text in the "Speech" feature | Passed to the phone's speech-recognition service (Android `SpeechRecognizer`), asking for offline recognition. Not recorded to a file by this app. If your phone has no offline speech pack for the language, that service (usually Google's) may recognise the speech online; the app shows a notice on screen whenever this happens. |
+| **Microphone audio** | Speech-to-text in the "Speech" feature; spoken Yes/No answers (installation disclaimer, emergency-contact confirmation, "open this QR link?"); dictating an emergency contact's name or number | Only while that question or field is active on screen — never in the background; the microphone is released as soon as an answer is heard, the question is answered by tap, or it times out. Passed to the phone's speech-recognition service (Android `SpeechRecognizer`), asking for offline recognition. Not recorded to a file by this app. If your phone has no offline speech pack for the language, that service (usually Google's) may recognise the speech online; the Speech feature shows a notice on screen whenever this happens (short Yes/No answers and contact dictation do not show this notice). |
 | **Precise / approximate location** | Included in the text of an emergency (SOS) alert so your chosen contacts know where you are | Read only at the moment you trigger SOS. Inserted into the alert message you send. Not stored, not logged, not uploaded to the developers. |
 | **Emergency contact names and phone numbers** | So the app can pre-fill an SOS alert to the people you choose | Stored **only** in a local database on your device. Never uploaded. Excluded from Google cloud backup. |
 | **App settings** (language, accessibility options, speech rate, an optional note you add to SOS alerts) | To run the app the way you configured it | Stored **only** in local app storage on your device. Excluded from Google cloud backup. |
+| **Disclaimer consent** | A record that you answered Yes to the installation disclaimer: the disclaimer version and the date and time | Stored **only** in local app storage on your device. Never uploaded. Removed by "Delete all data", after which the disclaimer is asked again. |
 
 There is **no code path** in the app that writes camera, audio or video data to
 disk or sends it to a network endpoint.
@@ -87,7 +88,7 @@ Cleartext (non-HTTPS) traffic is disabled at the OS level for this app.
 | Permission | Purpose | Required? |
 |---|---|---|
 | Camera | Object / hazard / text / currency recognition | Optional — only the "See" feature needs it |
-| Microphone (`RECORD_AUDIO`) | Speech-to-text | Optional — only the "Speech" feature needs it |
+| Microphone (`RECORD_AUDIO`) | Speech-to-text; spoken Yes/No answers and voice entry of emergency contacts | Optional — every Yes/No question and every field can also be answered by tapping or typing |
 | Location (fine / coarse) | Location line in SOS alerts | Optional — SOS works without it, but cannot include your location |
 | Vibration (`VIBRATE`) | Haptic confirmation of gestures and SOS | Always available; no runtime prompt |
 | Internet | On-device model downloads and Play update checks (see §3) | Used for first-time model download only |

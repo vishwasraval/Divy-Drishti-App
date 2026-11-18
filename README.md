@@ -1,39 +1,55 @@
-# Divy-Drishti — release documentation
+# Divy-Drishti — documentation
 
-> **Current release: 1.0.1 (versionCode 4)**, uploaded to Play Console on 2026-11-18. It adds offline speech
-> recognition with models bundled in the app. Everything for 1.0.1 is in [`v1.0.1/`](v1.0.1/).
+> **Current release: 1.0.1 (versionCode 5)**, 2026-11-18: speech recognition runs on the phone with models
+> bundled in the app (13 languages). Release files and checksums: `RELEASE_NOTES.md`.
 
-## `v1.0.1/` — current release
+All project documents are in this one folder.
 
-| File | What it is |
-|---|---|
-| `RELEASE_NOTES_VC4.md` | **Latest.** vc4 Play "What's new" (English, Hindi), checksums, changes since vc3, phone evidence. |
-| `RELEASE_NOTES_VC3.md` | vc3: auto-restart after update, card layouts, 16 KB and edge-to-edge fixes. |
-| `RELEASE_NOTES.md` | vc2: Play "What's new" and every change since 1.0.0. |
-| `SIGNING_AND_RELEASE_PROCEDURE.md` | Replacement upload key, Play upload-key reset, building and naming the AAB, universal APK for sideloading, version history. |
-| `CAPTCHA_READING.md` | How CAPTCHAs are found and cross-checked, with the phone measurements. |
-| `DISCLAIMER.md` | The setup disclaimer text and how consent is stored. |
-| `APP_FEATURES_SUMMARY.md` | Short feature summaries (under 500 characters) for listings and notes. |
-| `AUDIT_AND_RELEASE_REPORT.md` | 2026-10-08 production audit and smoke-test checklist. |
-| `MODEL_INVENTORY.md`, `DATASET_INVENTORY.md` | Every bundled model and dataset, with licences (speech models added for vc4). |
-| `PERFORMANCE_AND_COMPATIBILITY.md` | Speed, memory and 16 KB page-size checks. |
-
-The Word documents (features and user guide, testing report, technical description, comparison, press texts in
-English, Hindi and Gujarati) are in [`docs/`](../); they describe vc4.
-
-## This folder — Play Console submission
+## Word documents (for people outside the team)
 
 | File | What it is |
 |---|---|
-| `PLAY_STORE_LISTING.md` | App name, short/full description, graphic-asset requirements, screenshots submitted. |
-| `PLAY_DATA_SAFETY.md` | Answers for the Data safety form (ML Kit diagnostics declared; speech is on-device since vc4). |
-| `PRIVACY_POLICY.md` | Privacy policy text to host at a public HTTPS URL (updated 2026-11-18 for on-device speech). |
-| `PLAY_CONSOLE_DECLARATIONS.md` | App-content declarations and the text to enter. |
-| `PLAY_CONTENT_RATING.md`, `PLAY_APP_CATEGORY.md` | Content-rating answers; category (Tools). |
+| `DivyDrishti_Features_and_User_Guide.docx` | User guide; the source of truth for every claim in the store listing. |
+| `DivyDrishti_Technical_Description.docx` | Architecture, AI models, privacy design and honest-AI principles. |
+| `DivyDrishti_Testing_Report.docx` | Test cycles of 8–10 October (vc2), 16 October (vc3) and 17–18 November (developed as vc4, released as vc5). |
+| `DivyDrishti_Background_and_App_Overview.docx` | Why the app exists and what it does, for general readers. |
+| `DivyDrishti_Problem_Audience_Impact.docx` | Problem, audience and impact answers (form-length). |
+| `DivyDrishti_Comparative_Analysis.docx` | Comparison with nine other assistive apps. |
+| `DivyDrishti_English.docx`, `_Hindi.docx`, `_Gujarati.docx` | Press and media description in three languages. |
+
+## Releasing
+
+| File | What it is |
+|---|---|
+| `RELEASE_NOTES.md` | Every release (vc5, vc3, vc2): Play "What's new" in English and Hindi, checksums, changes, phone evidence. |
+| `SIGNING_AND_RELEASE_PROCEDURE.md` | Upload key, building and signing, debug symbols, installing with the speech pack, version history. |
+| `PERFORMANCE_AND_COMPATIBILITY.md` | Size, speed, memory, 16 KB page size, edge-to-edge. |
+
+## Google Play Console
+
+| File | What it is |
+|---|---|
+| `PLAY_STORE_LISTING.md` | Name, short and full description, short feature summaries, screenshots and feature graphic. |
+| `PLAY_CONSOLE_DECLARATIONS.md` | App content declarations, content rating answers, category and tags, permissions. |
+| `PLAY_DATA_SAFETY.md` | Data safety form answers (ML Kit diagnostics declared). |
 | `PLAY_REVIEWER_NOTES.md` | Instructions for Google's review team. |
+| `PRIVACY_POLICY.md` | Privacy policy to host at a public HTTPS URL (re-publish after every change). |
 | `Screenshot-*.png`, `feature_graphic.png` | Store screenshots (submitted 2026-10-13) and feature graphic. |
 
-Licences of bundled models and libraries: [`docs/ML_LICENSES.md`](../ML_LICENSES.md) and the in-app notices
+## AI models, data and features
+
+| File | What it is |
+|---|---|
+| `MODEL_INVENTORY.md` | Every model the app ships or was asked to ship, with its real status and device evidence. |
+| `ML_LICENSES.md` | Exact model files, sources, checksums and licences; models considered and rejected. |
+| `DATASET_INVENTORY.md` | Datasets used upstream, Indian-context candidates, and rules for any future training. |
+| `SEE_MODEL_CARD.md` | SEE detector: selection, label check, tracking across frames, limits, benchmarks. |
+| `CAPTCHA_READING.md` | How CAPTCHAs are found and cross-checked, with phone measurements. |
+| `DISTANCE_VALIDATION.md` | How to measure SEE's distance estimates on real phones (not yet done). |
+| `DISCLAIMER.md` | The setup disclaimer in all languages and how consent is stored. |
+| `SIGN_REPORT.md` | SIGN (Indian Sign Language): pipeline, status and why it is switched off. |
+
+Licences shown in the app: Settings → General → About → Open-source licences
 (`app/src/main/assets/third_party_notices.txt`).
 
 Signing: copy `keystore.properties.template` → `keystore.properties` (git-ignored) and fill it in, or set the

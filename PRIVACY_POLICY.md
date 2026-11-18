@@ -44,8 +44,10 @@ The app is designed to work fully offline. The only network activity is with
 **Google** (Google Play services, Google ML Kit, ARCore), over HTTPS, for:
 
 - **One-time download of on-device recognition models** (text recognition,
-  language identification, and offline translation language packs) the first time
-  a given capability or language pair is used. After download, these run offline.
+  language identification, and offline translation language packs), downloaded
+  automatically after first-run setup when the phone is online, or the first time a
+  capability is used. After download, these run offline. Speech recognition needs no
+  download: its models are installed with the app.
 - **Google Play in-app update checks** — the app asks Google Play whether a newer
   version exists and, if you choose to update, hands off to Google Play's own
   update flow. The app cannot and does not download or install APKs itself.

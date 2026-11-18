@@ -1,6 +1,6 @@
 # Divy-Drishti — Privacy Policy
 
-**Last updated:** 2026-10-09
+**Last updated:** 2026-11-18
 **Applies to:** Divy-Drishti Android application (package `com.divydrishti.app`), all versions from 1.0.0.
 
 > Publish this text at a stable public HTTPS URL (e.g. a GitHub Pages site or the
@@ -29,7 +29,7 @@ contact: **<INSERT CONTACT EMAIL>**.
 | Data | Why | Where it goes |
 |---|---|---|
 | **Camera frames** | Real-time object, hazard, text (OCR) and currency-denomination recognition in the "See" feature | Held in memory only, analysed frame-by-frame, then discarded. Never written to storage. Never uploaded. |
-| **Microphone audio** | Speech-to-text in the "Speech" feature; spoken Yes/No answers (installation disclaimer, emergency-contact confirmation, "open this QR link?"); dictating an emergency contact's name or number | Only while that question or field is active on screen — never in the background; the microphone is released as soon as an answer is heard, the question is answered by tap, or it times out. Passed to the phone's speech-recognition service (Android `SpeechRecognizer`), asking for offline recognition. Not recorded to a file by this app. If your phone has no offline speech pack for the language, that service (usually Google's) may recognise the speech online; the Speech feature shows a notice on screen whenever this happens (short Yes/No answers and contact dictation do not show this notice). |
+| **Microphone audio** | Speech-to-text in the "Speech" feature; spoken Yes/No answers (installation disclaimer, emergency-contact confirmation, "open this QR link?"); dictating an emergency contact's name or number | Only while that question or field is active on screen — never in the background; the microphone is released as soon as an answer is heard, the question is answered by tap, or it times out. Recognised in memory by the speech models installed with the app; never recorded to a file, never sent to any speech service, and never uploaded. (Versions before versionCode 4 used the phone's speech-recognition service, which could work online when no offline pack was installed.) |
 | **Precise / approximate location** | Included in the text of an emergency (SOS) alert so your chosen contacts know where you are | Read only at the moment you trigger SOS. Inserted into the alert message you send. Not stored, not logged, not uploaded to the developers. |
 | **Emergency contact names and phone numbers** | So the app can pre-fill an SOS alert to the people you choose | Stored **only** in a local database on your device. Never uploaded. Excluded from Google cloud backup. |
 | **App settings** (language, accessibility options, speech rate, an optional note you add to SOS alerts) | To run the app the way you configured it | Stored **only** in local app storage on your device. Excluded from Google cloud backup. |

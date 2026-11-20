@@ -1,7 +1,8 @@
 # Divy-Drishti — documentation
 
-> **Current release: 1.0.1 (versionCode 6)**, 2026-11-19: fixes a speech crash in the release build; SPEECH listens
-> at once; SEE and SPEECH keep the screen on; low-light help in SEE. Release files and checksums: `RELEASE_NOTES.md`.
+> **Current release: 1.0.1 (versionCode 7)**, 2026-11-20: the Emergency message is addressed to all saved contacts and
+> 112; SEE turns the flashlight on in the dark and has an on/off button; bilingual card names on Home and Settings;
+> SPEECH model preloaded for deaf and speech-impaired users. Release files and checksums: `RELEASE_NOTES.md`.
 
 All project documents are in this one folder.
 
@@ -11,7 +12,7 @@ All project documents are in this one folder.
 |---|---|
 | `DivyDrishti_Features_and_User_Guide.docx` | User guide; the source of truth for every claim in the store listing. |
 | `DivyDrishti_Technical_Description.docx` | Architecture, AI models, privacy design and honest-AI principles. |
-| `DivyDrishti_Testing_Report.docx` | Test cycles of 8–10 October (vc2), 16 October (vc3), 17–18 November (developed as vc4, released as vc5) and 19 November (vc6, no device run yet). |
+| `DivyDrishti_Testing_Report.docx` | Test cycles of 8–10 October (vc2), 16 October (vc3), 17–18 November (developed as vc4, released as vc5) 19 November (vc6) and 20 November (vc7); no device run yet for vc6 or vc7. |
 | `DivyDrishti_Background_and_App_Overview.docx` | Why the app exists and what it does, for general readers. |
 | `DivyDrishti_Problem_Audience_Impact.docx` | Problem, audience and impact answers (form-length). |
 | `DivyDrishti_Comparative_Analysis.docx` | Comparison with nine other assistive apps. |
@@ -21,7 +22,7 @@ All project documents are in this one folder.
 
 | File | What it is |
 |---|---|
-| `RELEASE_NOTES.md` | Every release (vc6, vc5, vc3, vc2): Play "What's new" in English and Hindi, checksums, changes, phone evidence. |
+| `RELEASE_NOTES.md` | Every release (vc7, vc6, vc5, vc3, vc2): Play "What's new" in English and Hindi, checksums, changes, phone evidence. |
 | `SIGNING_AND_RELEASE_PROCEDURE.md` | Upload key, building and signing, debug symbols, universal APK for sideloading, installing with the speech pack, version history. |
 | `PERFORMANCE_AND_COMPATIBILITY.md` | Size, speed, memory, 16 KB page size, edge-to-edge. |
 

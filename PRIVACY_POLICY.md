@@ -1,6 +1,6 @@
 # Divy-Drishti — Privacy Policy
 
-**Last updated:** 2026-11-18
+**Last updated:** 2026-11-20
 **Applies to:** Divy-Drishti Android application (package `com.divydrishti.app`), all versions from 1.0.0.
 
 > Publish this text at a stable public HTTPS URL (e.g. a GitHub Pages site or the
@@ -72,11 +72,13 @@ Cleartext (non-HTTPS) traffic is disabled at the OS level for this app.
 ## 4. Emergency (SOS) feature — specific notes
 
 - When you activate SOS, the app **opens your phone's own SMS app** pre-addressed
-  to the emergency contacts **you have saved in the app**, with a pre-written
+  to the emergency contacts **you have saved in the app** and to India's emergency
+  number **112**, with a pre-written
   message (your name if you set one, a maps link to your location if available,
   and the time). **You** review and complete the send. The app does not send SMS
   silently.
-- SOS messages go **only to your saved emergency contacts**. When you return to
+- SOS messages go **only to your saved emergency contacts and 112**, and only if
+  you press Send. When you return to
   the app afterwards, it opens your phone's dialer with **112** filled in so you can
   call if you choose; the app never places a call itself and holds no calling or
   SMS permission.
